@@ -1,1 +1,31 @@
-test
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polymode Inc. | ホーム</title>
+  <meta name="description" content="Polymode Inc.の公式ホームページです。" />
+</head>
+<body>
+  <header>
+    <h1>Polymode Inc.</h1>
+  </header>
+
+  <main>
+    <p>Hello! It's Polymode Inc. homepage.</p>
+
+    <section aria-labelledby="notice-heading">
+      <h2 id="notice-heading">公告</h2>
+      <p><a href="https://polymode.jp/ir">IR情報はこちら</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Polymode Inc.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
