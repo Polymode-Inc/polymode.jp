@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polymode Inc. | IR情報</title>
+  <meta name="description" content="Polymode Inc.のIR情報ページです。" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    caption {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: .5rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: .5rem 1rem;
+      text-align: left;
+    }
+    thead {
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Polymode Inc.</h1>
+    <p>IR情報</p>
+  </header>
+
+  <main>
+    <table>
+      <caption>公告</caption>
+      <thead>
+        <tr>
+          <th scope="col">期</th>
+          <th scope="col">PDF</th>
+          <th scope="col">公開日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">0</th>
+          <td><a href="demo.pdf">demo</a></td>
+          <td>2025/08/27</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Polymode Inc.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
