@@ -3,66 +3,287 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Polymode Inc. | IR情報</title>
-  <meta name="description" content="Polymode Inc.のIR情報ページです。" />
+  <title>IR情報 | Polymode Inc.</title>
+  <meta name="description" content="株式会社PolymodeのIR情報・電子公告ページです。" />
+  <link rel="stylesheet" href="../css/style.css" />
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 2rem;
-      line-height: 1.6;
+    /* IR専用のテーブルスタイル */
+    .ir-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: var(--spacing-lg) auto;
+      background: rgba(26, 31, 58, 0.5);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-md);
     }
-    table {
+
+    .ir-table table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
     }
-    caption {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: .5rem;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: .5rem 1rem;
+
+    .ir-table caption {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      padding: var(--spacing-md);
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       text-align: left;
     }
-    thead {
-      background: #f5f5f5;
+
+    .ir-table thead {
+      background: rgba(115, 195, 220, 0.15);
+    }
+
+    .ir-table th,
+    .ir-table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      border-bottom: 1px solid rgba(115, 195, 220, 0.1);
+    }
+
+    .ir-table th {
+      color: var(--color-accent-cyan);
+      font-weight: 600;
+      font-size: var(--font-size-base);
+    }
+
+    .ir-table td {
+      color: var(--color-text-secondary);
+    }
+
+    .ir-table tbody tr {
+      transition: var(--transition-fast);
+    }
+
+    .ir-table tbody tr:hover {
+      background: rgba(115, 195, 220, 0.05);
+    }
+
+    .ir-table tr:last-child th,
+    .ir-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .ir-table a {
+      color: var(--color-accent-cyan);
+      text-decoration: none;
+      transition: var(--transition-fast);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--border-radius-sm);
+      display: inline-block;
+    }
+
+    .ir-table a:hover {
+      background: rgba(115, 195, 220, 0.1);
+      color: var(--color-accent-purple);
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      .ir-table {
+        overflow-x: auto;
+      }
+
+      .ir-table th,
+      .ir-table td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-sm);
+      }
+
+      .ir-table caption {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-sm);
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Polymode Inc.</h1>
-    <p>IR情報</p>
-  </header>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">Polymode</div>
+      <button class="navbar-toggle" aria-label="メニュー" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="../index.html">ホーム</a></li>
+        <li><a href="../about.html">会社概要</a></li>
+        <li><a href="../services.html">事業内容</a></li>
+        <li><a href="../ir/" class="active">IR情報</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <main>
-    <table>
-      <caption>公告</caption>
-      <thead>
-        <tr>
-          <th scope="col">期</th>
-          <th scope="col">PDF</th>
-          <th scope="col">公開日</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">0</th>
-          <td><a href="demo.pdf">demo</a></td>
-          <td>2025/08/27</td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
+  <!-- Page Header -->
+  <section class="hero" style="min-height: 50vh;">
+    <div class="hero-content">
+      <h1 class="hero-title">IR Information</h1>
+      <p class="hero-subtitle">IR情報・電子公告</p>
+      <p class="hero-description">
+        株主・投資家の皆様への情報開示
+      </p>
+    </div>
+  </section>
 
-  <footer>
-    <small>&copy; <span id="year"></span> Polymode Inc.</small>
+  <!-- IR Content -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>電子公告</h2>
+        <p>Electronic Public Notice</p>
+      </div>
+
+      <div class="ir-table">
+        <table>
+          <caption>決算公告</caption>
+          <thead>
+            <tr>
+              <th scope="col">期</th>
+              <th scope="col">公告内容</th>
+              <th scope="col">公開日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">第0期</th>
+              <td><a href="demo.pdf" target="_blank" rel="noopener noreferrer">決算公告（PDF）</a></td>
+              <td>2025年8月27日</td>
+            </tr>
+            <!-- 今後の公告はここに追加 -->
+          </tbody>
+        </table>
+      </div>
+
+      <div style="max-width: 800px; margin: var(--spacing-lg) auto;">
+        <div class="card">
+          <h3 class="card-title">IR情報について</h3>
+          <p class="card-description">
+            株式会社Polymodeでは、株主・投資家の皆様に対して、
+            適時適切な情報開示を行うことを重視しております。<br><br>
+            決算公告をはじめとする各種IR情報は、本ページにて電子公告の方法により開示いたします。<br><br>
+            ご不明な点がございましたら、当社までお問い合わせください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="section" style="background: rgba(26, 31, 58, 0.3);">
+    <div class="container">
+      <div class="section-title">
+        <h2>関連情報</h2>
+        <p>Related Information</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🏢</div>
+          <h3 class="feature-title">会社概要</h3>
+          <p class="feature-description">
+            当社の基本情報、企業理念、事業目的をご覧いただけます
+          </p>
+          <a href="../about.html" class="btn btn-outline" style="margin-top: var(--spacing-sm);">詳しく見る</a>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">💼</div>
+          <h3 class="feature-title">事業内容</h3>
+          <p class="feature-description">
+            IT技術開発から不動産事業まで、多岐にわたる事業をご紹介
+          </p>
+          <a href="../services.html" class="btn btn-outline" style="margin-top: var(--spacing-sm);">詳しく見る</a>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🏠</div>
+          <h3 class="feature-title">トップページ</h3>
+          <p class="feature-description">
+            Polymode Inc.のホームページトップに戻ります
+          </p>
+          <a href="../index.html" class="btn btn-outline" style="margin-top: var(--spacing-sm);">ホームへ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Polymode Inc.</h3>
+          <p style="color: var(--color-text-muted); margin-top: var(--spacing-sm);">
+            先進技術で未来を創造する<br>
+            テクノロジーカンパニー
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <ul>
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="../about.html">会社概要</a></li>
+            <li><a href="../services.html">事業内容</a></li>
+            <li><a href="../ir/">IR情報</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>事業内容</h3>
+          <ul>
+            <li><a href="../services.html#tech">IT技術開発</a></li>
+            <li><a href="../services.html#investment">投資・資産管理</a></li>
+            <li><a href="../services.html#realestate">不動産事業</a></li>
+            <li><a href="../services.html#content">コンテンツ制作</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Polymode Inc. All rights reserved.</small>
+      </div>
+    </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(26, 31, 58, 0.95)';
+      } else {
+        navbar.style.background = 'rgba(26, 31, 58, 0.8)';
+      }
+    });
+
+    // モバイルメニュートグル
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navbarMenu.classList.toggle('active');
+      const isExpanded = this.classList.contains('active');
+      this.setAttribute('aria-expanded', isExpanded);
+    });
+
+    const menuLinks = document.querySelectorAll('.navbar-menu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navbarToggle.classList.remove('active');
+        navbarMenu.classList.remove('active');
+        navbarToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   </script>
 </body>
 </html>
