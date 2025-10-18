@@ -374,6 +374,30 @@ a:hover {
   margin-top: var(--spacing-md);
 }
 
+.card-grid.featured {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(115, 195, 220, 0.1) 0%, rgba(166, 101, 234, 0.1) 100%);
+  border: 2px solid rgba(115, 195, 220, 0.3);
+}
+
+.card.featured .card-icon {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+}
+
+.card.featured .card-title {
+  font-size: var(--font-size-2xl);
+}
+
+.card.featured .card-description {
+  font-size: var(--font-size-lg);
+}
+
 .card {
   background: rgba(26, 31, 58, 0.5);
   border: 1px solid rgba(115, 195, 220, 0.2);
@@ -613,6 +637,14 @@ a:hover {
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card-grid.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .card.featured {
+    grid-column: span 1;
   }
 
   .features-grid {
