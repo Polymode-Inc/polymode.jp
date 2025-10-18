@@ -1,0 +1,31 @@
+# Polymode Inc. Website Configuration
+
+# Site Settings
+title: "Polymode Inc."
+description: "先進技術で未来を創造する"
+url: "https://polymode.jp"
+baseurl: ""
+
+# Company Information
+company:
+  name: "株式会社Polymode"
+  name_en: "Polymode Inc."
+  tagline: "先進技術で未来を創造する"
+  tagline_sub: "テクノロジーカンパニー"
+  established: "2025年"
+  location: "日本"
+
+# Contact
+contact:
+  form_url: "https://forms.gle/S1fV3WqSvwMrxMCt9"
+
+# Build Settings
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Plugins (GitHub Pages compatible only)
+plugins:
+  - jekyll-seo-tag

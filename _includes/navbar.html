@@ -1,0 +1,17 @@
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">Polymode</div>
+    <button class="navbar-toggle" aria-label="メニュー" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="navbar-menu">
+      <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>ホーム</a></li>
+      <li><a href="{{ site.baseurl }}/about.html" {% if page.url == "/about.html" %}class="active"{% endif %}>会社概要</a></li>
+      <li><a href="{{ site.baseurl }}/services.html" {% if page.url == "/services.html" %}class="active"{% endif %}>事業内容</a></li>
+      <li><a href="{{ site.baseurl }}/ir/" {% if page.url contains "/ir/" %}class="active"{% endif %}>IR情報</a></li>
+    </ul>
+  </div>
+</nav>

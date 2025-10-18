@@ -1,298 +1,200 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>会社概要 | Polymode Inc.</title>
-  <meta name="description" content="株式会社Polymodeの会社概要、企業理念、事業目的をご紹介します。" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">Polymode</div>
-      <button class="navbar-toggle" aria-label="メニュー" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="navbar-menu">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="about.html" class="active">会社概要</a></li>
-        <li><a href="services.html">事業内容</a></li>
-        <li><a href="ir/">IR情報</a></li>
-      </ul>
-    </div>
-  </nav>
+---
+layout: default
+title: 会社概要
+description: 株式会社Polymodeの会社概要、企業理念、事業目的をご紹介します。
+---
 
-  <!-- Page Header -->
-  <section class="hero" style="min-height: 50vh;">
-    <div class="hero-content">
-      <h1 class="hero-title">About Us</h1>
-      <p class="hero-subtitle">会社概要</p>
-      <p class="hero-description">
-        テクノロジーの力で、社会に新しい価値を創造します
-      </p>
-    </div>
-  </section>
+<!-- Page Header -->
+<section class="hero" style="min-height: 50vh;">
+  <div class="hero-content">
+    <h1 class="hero-title">About Us</h1>
+    <p class="hero-subtitle">会社概要</p>
+    <p class="hero-description">
+      テクノロジーの力で、社会に新しい価値を創造します
+    </p>
+  </div>
+</section>
 
-  <!-- Mission & Vision -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Mission & Vision</h2>
-        <p>私たちの理念</p>
+<!-- Mission & Vision -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Mission & Vision</h2>
+      <p>私たちの理念</p>
+    </div>
+
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+      <div class="card">
+        <h3 class="card-title text-gradient">Mission</h3>
+        <p class="card-description" style="font-size: var(--font-size-lg);">
+          最先端のテクノロジーと革新的なアイデアで、<br>
+          お客様のビジネスに新しい価値を創造し、<br>
+          持続可能な社会の実現に貢献する。
+        </p>
       </div>
 
-      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-        <div class="card">
-          <h3 class="card-title text-gradient">Mission</h3>
-          <p class="card-description" style="font-size: var(--font-size-lg);">
-            最先端のテクノロジーと革新的なアイデアで、<br>
-            お客様のビジネスに新しい価値を創造し、<br>
-            持続可能な社会の実現に貢献する。
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title text-gradient">Vision</h3>
-          <p class="card-description" style="font-size: var(--font-size-lg);">
-            技術革新のフロントランナーとして、<br>
-            多様な事業領域で価値を創造し、<br>
-            社会から信頼される企業であり続ける。
-          </p>
-        </div>
+      <div class="card">
+        <h3 class="card-title text-gradient">Vision</h3>
+        <p class="card-description" style="font-size: var(--font-size-lg);">
+          技術革新のフロントランナーとして、<br>
+          多様な事業領域で価値を創造し、<br>
+          社会から信頼される企業であり続ける。
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Company Info -->
-  <section class="section" style="background: rgba(26, 31, 58, 0.3);">
-    <div class="container">
-      <div class="section-title">
-        <h2>Company Information</h2>
-        <p>会社情報</p>
+<!-- Company Info -->
+<section class="section" style="background: rgba(26, 31, 58, 0.3);">
+  <div class="container">
+    <div class="section-title">
+      <h2>Company Information</h2>
+      <p>会社情報</p>
+    </div>
+
+    <div class="info-table">
+      <table>
+        <tr>
+          <th>商号</th>
+          <td>{{ site.company.name }}</td>
+        </tr>
+        <tr>
+          <th>英文商号</th>
+          <td>{{ site.company.name_en }}</td>
+        </tr>
+        <tr>
+          <th>設立</th>
+          <td>{{ site.company.established }}</td>
+        </tr>
+        <tr>
+          <th>本店所在地</th>
+          <td>{{ site.company.location }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Business Objectives -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Business Objectives</h2>
+      <p>事業目的</p>
+    </div>
+
+    <div class="card-grid featured">
+      <div class="card featured">
+        <div class="card-icon">💻</div>
+        <h3 class="card-title">情報技術事業 <span style="font-size: 0.7em; color: var(--color-accent-cyan);">― Primary Business</span></h3>
+        <p class="card-description">
+          ソフトウェア、Webサービス、人工知能、ブロックチェーン等の情報技術に関する企画、開発、提供、運営、受託及びコンサルティング。
+          当社の中核を担う事業として、最先端のIT技術で社会に革新をもたらします。
+        </p>
       </div>
 
-      <div class="info-table">
-        <table>
-          <tr>
-            <th>商号</th>
-            <td>株式会社Polymode（Polymode Inc.）</td>
-          </tr>
-          <tr>
-            <th>英文商号</th>
-            <td>Polymode Inc.</td>
-          </tr>
-          <tr>
-            <th>設立</th>
-            <td>2025年</td>
-          </tr>
-          <tr>
-            <th>本店所在地</th>
-            <td>日本</td>
-          </tr>
-        </table>
+      <!-- 以下の事業は現在非公開（コメントアウト解除で再公開可能）
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3 class="card-title">投資・資産管理事業</h3>
+        <p class="card-description">
+          有価証券、債権、不動産その他各種資産への投資及びその管理
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏠</div>
+        <h3 class="card-title">不動産事業</h3>
+        <p class="card-description">
+          不動産の売買、賃貸借、管理及び自社保有物件のリフォーム、リノベーションに関する業務
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏨</div>
+        <h3 class="card-title">宿泊事業</h3>
+        <p class="card-description">
+          住宅宿泊事業法に基づく住宅宿泊事業、住宅宿泊管理業及び住宅宿泊仲介業、並びに旅館業法に基づく旅館業
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3 class="card-title">出版事業</h3>
+        <p class="card-description">
+          書籍の企画、制作、出版、販売及びこれらの取り扱いを行う書店の運営
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎬</div>
+        <h3 class="card-title">メディア事業</h3>
+        <p class="card-description">
+          映像、文書等のメディアコンテンツの企画、制作、編集、配信及び販売
+        </p>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section" style="background: rgba(26, 31, 58, 0.3);">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Values</h2>
+      <p>私たちの価値観</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🚀</div>
+        <h3 class="feature-title">Innovation</h3>
+        <p class="feature-description">
+          常に新しい技術とアイデアを追求し、イノベーションを起こし続けます
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🤝</div>
+        <h3 class="feature-title">Trust</h3>
+        <p class="feature-description">
+          誠実さと透明性を持って、お客様や社会からの信頼を築きます
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Excellence</h3>
+        <p class="feature-description">
+          最高品質のサービスを提供するため、常に卓越性を追求します
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🌱</div>
+        <h3 class="feature-title">Sustainability</h3>
+        <p class="feature-description">
+          持続可能な社会の実現に向けて、責任ある事業活動を行います
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Business Objectives -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Business Objectives</h2>
-        <p>事業目的</p>
-      </div>
-
-      <div class="card-grid featured">
-        <div class="card featured">
-          <div class="card-icon">💻</div>
-          <h3 class="card-title">情報技術事業 <span style="font-size: 0.7em; color: var(--color-accent-cyan);">― Primary Business</span></h3>
-          <p class="card-description">
-            ソフトウェア、Webサービス、人工知能、ブロックチェーン等の情報技術に関する企画、開発、提供、運営、受託及びコンサルティング。
-            当社の中核を担う事業として、最先端のIT技術で社会に革新をもたらします。
-          </p>
-        </div>
-
-        <!-- 以下の事業は現在非公開（コメントアウト解除で再公開可能）
-        <div class="card">
-          <div class="card-icon">📊</div>
-          <h3 class="card-title">投資・資産管理事業</h3>
-          <p class="card-description">
-            有価証券、債権、不動産その他各種資産への投資及びその管理
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🏠</div>
-          <h3 class="card-title">不動産事業</h3>
-          <p class="card-description">
-            不動産の売買、賃貸借、管理及び自社保有物件のリフォーム、リノベーションに関する業務
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🏨</div>
-          <h3 class="card-title">宿泊事業</h3>
-          <p class="card-description">
-            住宅宿泊事業法に基づく住宅宿泊事業、住宅宿泊管理業及び住宅宿泊仲介業、並びに旅館業法に基づく旅館業
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">📖</div>
-          <h3 class="card-title">出版事業</h3>
-          <p class="card-description">
-            書籍の企画、制作、出版、販売及びこれらの取り扱いを行う書店の運営
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🎬</div>
-          <h3 class="card-title">メディア事業</h3>
-          <p class="card-description">
-            映像、文書等のメディアコンテンツの企画、制作、編集、配信及び販売
-          </p>
-        </div>
-        -->
-      </div>
+<!-- CTA -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="text-gradient">私たちのサービスをご覧ください</h2>
+    <p style="color: var(--color-text-secondary); margin: var(--spacing-md) 0;">
+      最先端のテクノロジーと多様な事業で、<br>
+      お客様のビジネスをサポートします
+    </p>
+    <div class="btn-group mt-lg">
+      <a href="{{ site.contact.form_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+      <a href="services.html" class="btn btn-outline">事業内容を見る</a>
+      <a href="index.html" class="btn btn-outline">ホームに戻る</a>
     </div>
-  </section>
-
-  <!-- Values -->
-  <section class="section" style="background: rgba(26, 31, 58, 0.3);">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Values</h2>
-        <p>私たちの価値観</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">🚀</div>
-          <h3 class="feature-title">Innovation</h3>
-          <p class="feature-description">
-            常に新しい技術とアイデアを追求し、イノベーションを起こし続けます
-          </p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🤝</div>
-          <h3 class="feature-title">Trust</h3>
-          <p class="feature-description">
-            誠実さと透明性を持って、お客様や社会からの信頼を築きます
-          </p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">⚡</div>
-          <h3 class="feature-title">Excellence</h3>
-          <p class="feature-description">
-            最高品質のサービスを提供するため、常に卓越性を追求します
-          </p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🌱</div>
-          <h3 class="feature-title">Sustainability</h3>
-          <p class="feature-description">
-            持続可能な社会の実現に向けて、責任ある事業活動を行います
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container text-center">
-      <h2 class="text-gradient">私たちのサービスをご覧ください</h2>
-      <p style="color: var(--color-text-secondary); margin: var(--spacing-md) 0;">
-        最先端のテクノロジーと多様な事業で、<br>
-        お客様のビジネスをサポートします
-      </p>
-      <div class="btn-group mt-lg">
-        <a href="https://forms.gle/S1fV3WqSvwMrxMCt9" class="btn btn-primary" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
-        <a href="services.html" class="btn btn-outline">事業内容を見る</a>
-        <a href="index.html" class="btn btn-outline">ホームに戻る</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Polymode Inc.</h3>
-          <p style="color: var(--color-text-muted); margin-top: var(--spacing-sm);">
-            先進技術で未来を創造する<br>
-            テクノロジーカンパニー
-          </p>
-        </div>
-
-        <div class="footer-section">
-          <h3>サイトマップ</h3>
-          <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">会社概要</a></li>
-            <li><a href="services.html">事業内容</a></li>
-            <li><a href="ir/">IR情報</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>事業内容</h3>
-          <ul>
-            <li><a href="services.html#tech">IT技術開発</a></li>
-            <!--
-            <li><a href="services.html#investment">投資・資産管理</a></li>
-            <li><a href="services.html#realestate">不動産事業</a></li>
-            <li><a href="services.html#content">コンテンツ制作</a></li>
-            -->
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <small>&copy; <span id="year"></span> Polymode Inc. All rights reserved.</small>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(26, 31, 58, 0.95)';
-      } else {
-        navbar.style.background = 'rgba(26, 31, 58, 0.8)';
-      }
-    });
-
-    // モバイルメニュートグル
-    const navbarToggle = document.querySelector('.navbar-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
-
-    navbarToggle.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navbarMenu.classList.toggle('active');
-      const isExpanded = this.classList.contains('active');
-      this.setAttribute('aria-expanded', isExpanded);
-    });
-
-    const menuLinks = document.querySelectorAll('.navbar-menu a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navbarToggle.classList.remove('active');
-        navbarMenu.classList.remove('active');
-        navbarToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-</body>
-</html>
+  </div>
+</section>
