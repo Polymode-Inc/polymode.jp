@@ -7,17 +7,34 @@ url: "https://polymode.jp"
 baseurl: ""
 
 # Company Information
+#1. 公開すべき情報（必須）
+
+#これは法律や信頼性の観点から必ず掲載した方がよい情報です。
+
+#会社名（正式名称）
+
+#代表者名（代表取締役など）
+
+#所在地（本店所在地）
+
+
+
+
 company:
   name: "株式会社Polymode"
   name_en: "Polymode Inc."
+  representative: "宮澤 快(みやざわ かい)"
   tagline: "先進技術で未来を創造する"
   tagline_sub: "テクノロジーカンパニー"
-  established: "2025年"
+  established: "2025年9月24日"
+  capital: "100万円"
+  address: "〒 150-0044 東京都渋谷区円山町5番3号 MIEUX渋谷ビル8階"
   location: "日本"
 
 # Contact
 contact:
   form_url: "https://forms.gle/S1fV3WqSvwMrxMCt9"
+  e_mail: "info@polymode.jp"
 
 # Build Settings
 markdown: kramdown
