@@ -1,0 +1,173 @@
+---
+layout: null
+title: 第1期 決算公告
+description: 株式会社Polymodeの第1期決算公告（貸借対照表）です。
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>第1期 決算公告 | {{ site.company.name }}</title>
+  <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --border: #ccc;
+      --bg: #fff;
+      --accent: #003366;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 1.125rem;
+      margin: 2.5rem 0 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    dl.company-info {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+    dl.company-info > div {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 0;
+    }
+    dl.company-info dt {
+      flex: 0 0 8rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    dl.company-info dd {
+      flex: 1;
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+    thead th {
+      background: #f4f6f9;
+      font-weight: 600;
+    }
+    a {
+      color: var(--accent);
+    }
+    .notes {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .updated {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+    @media (max-width: 480px) {
+      dl.company-info > div { flex-direction: column; }
+      dl.company-info dt { flex: none; }
+    }
+      td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    tr.total th, tr.total td { font-weight: 600; background: #f4f6f9; }
+    td.indent { padding-left: 2rem; }
+    .unit { text-align: right; font-size: 0.9rem; color: var(--muted); margin: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>第1期 決算公告</h1>
+    <p>2026年11月15日<br>{{ site.company.address }}<br>{{ site.company.name }}<br>代表取締役　宮澤 快</p>
+
+    <h2>貸借対照表（2026年8月31日現在）</h2>
+    <p class="unit">（単位：円）</p>
+    <table>
+      <thead><tr><th scope="col">資産の部</th><th scope="col">金額</th></tr></thead>
+      <tbody>
+        <tr><td>流動資産</td><td class="num">1,792,884</td></tr>
+        <tr><td class="indent">現金及び預金</td><td class="num">921,794</td></tr>
+        <tr><td class="indent">売掛金</td><td class="num">110,000</td></tr>
+        <tr><td class="indent">有価証券</td><td class="num">727,760</td></tr>
+        <tr><td class="indent">前払金</td><td class="num">33,330</td></tr>
+        <tr><td>繰延資産</td><td class="num">201,623</td></tr>
+        <tr><td class="indent">創立費</td><td class="num">200,300</td></tr>
+        <tr><td class="indent">開業費</td><td class="num">1,323</td></tr>
+        <tr class="total"><td>資産の部合計</td><td class="num">1,994,507</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th scope="col">負債の部</th><th scope="col">金額</th></tr></thead>
+      <tbody>
+        <tr><td>流動負債</td><td class="num">781,547</td></tr>
+        <tr><td class="indent">短期借入金</td><td class="num">102,500</td></tr>
+        <tr><td class="indent">未払金</td><td class="num">40,547</td></tr>
+        <tr><td class="indent">前受金</td><td class="num">495,000</td></tr>
+        <tr><td class="indent">未払法人税等</td><td class="num">143,500</td></tr>
+        <tr class="total"><td>負債の部合計</td><td class="num">781,547</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th scope="col">純資産の部</th><th scope="col">金額</th></tr></thead>
+      <tbody>
+        <tr><td>株主資本</td><td class="num">1,212,960</td></tr>
+        <tr><td class="indent">資本金</td><td class="num">1,000,000</td></tr>
+        <tr><td class="indent">利益剰余金</td><td class="num">212,960</td></tr>
+        <tr><td class="indent">その他利益剰余金（繰越利益剰余金）</td><td class="num">212,960</td></tr>
+        <tr class="total"><td>純資産の部合計</td><td class="num">1,212,960</td></tr>
+        <tr class="total"><td>負債・純資産の部合計</td><td class="num">1,994,507</td></tr>
+      </tbody>
+    </table>
+
+    <h2>注記</h2>
+    <ol>
+      <li>当事業年度は、2025年9月24日（設立日）から2026年8月31日までです。</li>
+      <li>この計算書類は、「中小企業の会計に関する指針」によって作成しています。</li>
+      <li>重要な会計方針
+        <ul>
+          <li>有価証券の評価基準及び評価方法：その他有価証券は、総平均法による原価法によっています。</li>
+          <li>繰延資産の処理方法：創立費及び開業費は資産に計上し、任意の時期に任意の金額を償却する方法によっています。当事業年度の償却額は0円です。</li>
+          <li>消費税等の会計処理：免税事業者であるため、税込方式によっています。</li>
+        </ul>
+      </li>
+      <li>貸借対照表に関する注記：有形固定資産の減価償却累計額は該当ありません。短期借入金は、代表取締役からの無利息の立替・借入金です。</li>
+      <li>当期純利益：212,960円</li>
+    </ol>
+
+    <p class="notes">
+      本ページは会社法第440条の規定に基づく電子公告です。<br>
+      <a href="./">電子公告の一覧へ</a>　お問い合わせ先：<a href="mailto:{{ site.contact.e_mail }}">{{ site.contact.e_mail }}</a>
+    </p>
+  </main>
+</body>
+</html>

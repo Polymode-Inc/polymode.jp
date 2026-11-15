@@ -64,5 +64,5 @@ Jekyll の標準構成に従ったテンプレート駆動の静的サイト。
 - **メインと IR を相互リンクしない**（[サイト構造](#サイト構造重要な前提) 参照）。ナビ／フッター／CTA に IR リンクを足さない。IR ページからメインへの戻りリンクも足さない。
 - ナビ／フッターのリンクを増減する場合は `_includes/navbar.html` と `_includes/footer.html` の両方を更新する。
 - ページ間リンクは Jekyll の `{{ site.baseurl }}` を前置すること（navbar/footer はこの方式）。
-- 新しい決算公告 PDF を追加する際は、`ir/` 配下に PDF を置き、`ir/index.html` の `<tbody>` 内に行を追記する。
+- 新しい決算公告を追加する際は、`ir/term<期>.html`（貸借対照表と注記。`ir/term1.html` を雛形にする。`layout: null`・inline style）を置き、`ir/index.html` の `<tbody>` 内に行を追記する。公告は5年間載せ続けるので、過去の期のページとURLは消さない。
 - `services.html` に書かれている事例（Case Studies）は **顧客名を伏せて業務軸で一般化** した記述。新事例を追加する際もこの粒度（業務カテゴリ＋作ったもの）を維持し、固有名詞は出さない。
