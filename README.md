@@ -41,6 +41,7 @@ IR ページはこのデザインシステムを使わず、白背景・サン�
 - Vanilla JavaScript（ES6+）
 - Jekyll（GitHub Pages 標準）
 - GitHub Pages
+- Cloudflare Web Analytics（Cookie なしのアクセス解析。メインサイトのみ、`_layouts/default.html` で読み込む。IR には入れない）
 
 ## サイトのポジショニング
 
