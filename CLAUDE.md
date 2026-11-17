@@ -54,7 +54,7 @@ npx http-server
 Jekyll の標準構成に従ったテンプレート駆動の静的サイト。
 
 - **`_config.yml`** — サイト全体の設定と会社情報（`site.company.*`、`site.contact.*`）を一元管理。代表者名・住所・資本金などを変更する場合は必ずここを編集する（各 HTML にハードコードしない）。`ir/index.html` も Liquid 経由でここから値を引いている。
-- **`_layouts/default.html`** — メインサイトの各ページ専用の外枠。`head` / `navbar` / `footer` を include した上で `{{ content }}` を差し込む。`ir/index.html` はこのレイアウトを使わない（`layout: null`）。
+- **`_layouts/default.html`** — メインサイトの各ページ専用の外枠。`head` / `navbar` / `footer` を include した上で `{{ content }}` を差し込む。`ir/index.html` はこのレイアウトを使わない（`layout: null`）。 `</body>` の直前に Cloudflare Web Analytics（Cookie なしのアクセス解析）のビーコンを置いているので、メインサイトの全ページが計測される。**IR（電子公告）には計測を入れない**（法定の公告ページで、宣伝・集客の対象ではないため）。
 - **`_includes/`** — `head.html`（meta/CSS）、`navbar.html`（モバイルメニュー対応ナビ）、`footer.html`（サイトマップ + 年自動更新 + ナビ挙動の inline JS）。ナビゲーションのモバイルトグルとスクロール時の navbar 背景変更は `footer.html` 末尾のスクリプトで実装。
 - **メインサイトのページ**（`index.html`, `about.html`, `services.html`, `ai-onboarding.html`）— front matter（`layout: default`, `title`, `description`）+ ボディ。`title` は head で `{{ page.title }} | Polymode Inc.` の形に整形される。
 - **`ir/index.html`** — 完全独立の単一HTMLページ。`layout: null` を front matter に指定し、`<!doctype html>` から自前で書く。スタイルは外部 CSS を読まず inline `<style>` で完結（メインサイトのダークテーマ CSS Variables には依存しない）。
